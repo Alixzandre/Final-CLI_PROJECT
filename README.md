@@ -21,8 +21,13 @@ Or install it yourself as:
     $ gem install electronic_devices
 
 ## Usage
+when installed 
 
-TODO: Write usage instructions here
+use: cd electronic_devices
+
+then: use ruby bin/TestA
+
+then: type the product you want (in full) and it will show you products in the class and info about it
 
 ## Development
 
