@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require './lib/electronic_devices'
+ElectronicDevices::CLI.new.call
+
+# testing 123
