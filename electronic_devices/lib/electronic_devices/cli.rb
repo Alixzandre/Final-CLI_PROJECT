@@ -29,9 +29,9 @@ class ElectronicDevices::CLI
         when "list"
           list_products
         when "laptops"
-          ElectronicDevices::Menus.laptop_menu
+          Product.create_laptop
         when "smart phones"
-          ElectronicDevices::Menus.phone_menu
+          Product.phone
         else
           puts "Not apart of the list type exit or retry"
         end
