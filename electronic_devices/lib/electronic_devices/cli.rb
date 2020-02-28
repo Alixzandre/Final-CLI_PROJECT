@@ -29,7 +29,7 @@ class ElectronicDevices::CLI
         when "list"
           list_products
         when "laptops"
-          Product.create_laptop
+          Product.laptops
         when "smart phones"
           Product.phone
         else

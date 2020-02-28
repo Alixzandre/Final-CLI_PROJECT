@@ -1,24 +1,27 @@
 
 class Product
-  attr_accessor :nameList, :priceList, :specList
-  @@all = []
+  attr_accessor :name, :price, :spec
+  @@all = {}
 
   def initialize(name, spec, price)
-    @name = name
-    @spec = spec
+    @name = name #only returns product
+    @spec = spec #error
     @price = price
-    @@all << self
+    @@all < self
   end
 
-  def self.create_laptop(name, spec, price)
-    laptop = self.new(name.split(". "), spec.split("SSD"), price.split("$"))
-    @@all << self
-    
+  def self.laptops
+     ElectronicDevices::Menus.laptop_menu
+    #puts "#{self.all.name}"
+    #puts "#{self.all.nameList}"
+    puts "#{self.all}"
+
+      binding.pry
+
   end
 
   def self.all
     @@all
-
   end
 
 end

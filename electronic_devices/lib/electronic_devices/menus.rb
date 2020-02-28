@@ -9,9 +9,9 @@ class ElectronicDevices::Menus
     spec = doc.search("p.specs__container").text
     price = doc.search(" div.hawk-price-deal-full-price-main div.hawk-affiliate-link-container").text
 
-    Product.create_laptop(name, spec, price)
 
-    #laptop = Product.new(name.split(". "), spec.split("SSD"), price.split("$"))
+    laptop = Product.new(name.split(". "), spec.split("SSD"), price.split("$"))
+
 
 
   end
@@ -21,15 +21,12 @@ class ElectronicDevices::Menus
 
     phonedoc = Nokogiri::HTML(open("https://www.t3.com/us/features/best-smartphone"))
 
-
     name = phonedoc.search("h3.product__title").text #needs abrigiing shows all ten names
     spec = phonedoc.search("div.product-summary__container").text
     price = phonedoc.search("div.hawk-price-deal-full-price-container  span.hawk-display-price-price").text
 
 
-
-    #phone = Product.new(name.split(". "), spec.split("$"), price.split("Weight:"))
-
+    phone = Product.new(name.split(". "), spec.split("$"), price.split("Weight:"))
 
   end
 
